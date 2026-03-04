@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stroop Testi</title>
+  <link rel="stylesheet" href="stroop.css" />
+</head>
+<body>
+  <h1>Stroop Testi</h1>
+  <p class="desc">Kelimenin <strong>rengini</strong> seç, yazan kelimeyi değil!</p>
+
+  <div id="hud">
+    <span>Skor: <strong id="score">0</strong></span>
+    <span>Seviye: <strong id="level">1</strong></span>
+    <span>Süre: <strong id="timer">--</strong></span>
+  </div>
+
+  <div id="word-display">
+    <span id="word"></span>
+  </div>
+
+  <div id="buttons"></div>
+
+  <div id="feedback"></div>
+
+  <div id="start-screen">
+    <h2>Hazır mısın?</h2>
+    <p>Her soruda kelimenin <em>yazı rengini</em> seç.<br/>Doğru cevap skor ve seviye kazandırır!</p>
+    <button id="start-btn">Başla</button>
+  </div>
+
+  <div id="game-over-screen" class="hidden">
+    <h2>Oyun Bitti!</h2>
+    <p>Skorun: <strong id="final-score"></strong></p>
+    <p>Ulaştığın seviye: <strong id="final-level"></strong></p>
+    <button id="restart-btn">Tekrar Oyna</button>
+  </div>
+
+  <script src="stroop.js"></script>
+</body>
+</html>

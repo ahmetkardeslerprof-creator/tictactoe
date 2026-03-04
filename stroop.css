@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #0d0d1a;
+  color: #eee;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 20px;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  color: #e94560;
+}
+
+.desc {
+  color: #a8dadc;
+  text-align: center;
+  font-size: 1rem;
+}
+
+#hud {
+  display: flex;
+  gap: 30px;
+  font-size: 1.1rem;
+  color: #ccc;
+}
+
+#hud strong {
+  color: #fff;
+}
+
+#word-display {
+  background: #16213e;
+  border-radius: 16px;
+  width: 320px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #0f3460;
+}
+
+#word {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  max-width: 360px;
+}
+
+.color-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: #fff;
+  transition: transform 0.1s, opacity 0.1s;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+}
+
+.color-btn:hover {
+  transform: scale(1.07);
+  opacity: 0.9;
+}
+
+#feedback {
+  font-size: 1.4rem;
+  font-weight: bold;
+  height: 36px;
+  transition: opacity 0.3s;
+}
+
+#feedback.correct { color: #4caf50; }
+#feedback.wrong   { color: #e94560; }
+
+#start-screen,
+#game-over-screen {
+  position: fixed;
+  inset: 0;
+  background: rgba(13,13,26,0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 10;
+}
+
+#game-over-screen.hidden,
+#start-screen.hidden {
+  display: none;
+}
+
+#start-screen h2,
+#game-over-screen h2 {
+  font-size: 2rem;
+  color: #e94560;
+}
+
+#start-screen p,
+#game-over-screen p {
+  color: #a8dadc;
+  text-align: center;
+  line-height: 1.6;
+}
+
+#start-btn, #restart-btn {
+  margin-top: 10px;
+  padding: 12px 36px;
+  font-size: 1.1rem;
+  background: #e94560;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+#start-btn:hover, #restart-btn:hover {
+  background: #c73652;
+}
